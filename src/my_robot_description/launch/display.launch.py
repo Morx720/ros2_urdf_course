@@ -7,7 +7,7 @@ import os
 
 def generate_launch_description():
     
-    urdf_path=os.path.join(get_package_share_path("my_robot_description"),"urdf","my_robot.urdf")
+    urdf_path=os.path.join(get_package_share_path("my_robot_description"),"urdf","my_robot.urdf.xacro")
     rviz_config_path=os.path.join(get_package_share_path("my_robot_description"),"rviz","display_urdf.rviz")
     robot_description=ParameterValue(Command(["xacro ", urdf_path]), value_type=str)
     
